@@ -1,0 +1,8 @@
+windows/bin/
+qt/
+build/
+build-*/
+*.user
+.vs/
+.vscode/
+CMakeUserPresets.json

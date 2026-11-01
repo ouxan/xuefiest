@@ -1,0 +1,232 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Common -->
+    <sys:String x:Key="Common.Cancel">İptal</sys:String>
+    <sys:String x:Key="Common.Stop">Durdur</sys:String>
+    <sys:String x:Key="Common.OK">Tamam</sys:String>
+    <sys:String x:Key="Common.Close">Kapat</sys:String>
+    <sys:String x:Key="Common.Save">Kaydet</sys:String>
+    <sys:String x:Key="Common.Browse">Gözat</sys:String>
+    <sys:String x:Key="Common.ContinueAnyway">Yine de devam et</sys:String>
+    <sys:String x:Key="Common.Cancelled">İptal edildi.</sys:String>
+    <sys:String x:Key="Common.NotFound">bulunamadı</sys:String>
+
+    <!-- Main window -->
+    <sys:String x:Key="App.Tagline">Steam güncelleme denetimi</sys:String>
+    <sys:String x:Key="Main.Search">Kütüphanede ara</sys:String>
+    <sys:String x:Key="Main.Add">Klasörden ekle</sys:String>
+    <sys:String x:Key="Main.AddTip">Steam'de henüz olmayan bir oyun klasörü için manifest oluşturur. Steam oyunu algıladığında güncelleme başlatmaz.</sys:String>
+    <sys:String x:Key="Main.Refresh">Yenile (F5)</sys:String>
+    <sys:String x:Key="Main.Settings">Ayarlar</sys:String>
+    <sys:String x:Key="Main.Library">Kütüphane</sys:String>
+    <sys:String x:Key="Main.ShowTools">Araçları göster</sys:String>
+    <sys:String x:Key="Main.CheckAll">Güncellemeleri denetle</sys:String>
+    <sys:String x:Key="Main.CheckAllTip">Listedeki tüm oyunların son sürümünü SteamCMD ile (anonim oturum) sorgular.</sys:String>
+    <sys:String x:Key="Main.PickGame">Oyun seçilmedi</sys:String>
+    <sys:String x:Key="Main.PickGameHint">Ayrıntıları görmek için kütüphaneden bir oyun seçin.</sys:String>
+    <sys:String x:Key="Main.Log">Günlük</sys:String>
+    <sys:String x:Key="Main.Ready">Hazır</sys:String>
+    <sys:String x:Key="Main.NoSteam">Steam kurulumu bulunamadı. Ayarlar'dan Steam klasörünü belirtin.</sys:String>
+    <sys:String x:Key="Main.GamesFound">{0} oyun</sys:String>
+    <sys:String x:Key="Main.EmptyNoSteam">Steam klasörü bulunamadı. Ayarlar'dan belirtin.</sys:String>
+    <sys:String x:Key="Main.EmptyNoMatch">Aramayla eşleşen oyun yok</sys:String>
+    <sys:String x:Key="Main.EmptyNone">Yüklü oyun yok</sys:String>
+    <sys:String x:Key="Main.Fetching">SteamCMD'den veri alınıyor… İlk çalıştırma birkaç dakika sürebilir.</sys:String>
+    <sys:String x:Key="Main.AllUpToDate">✔ Tüm oyunlar son sürümde.</sys:String>
+    <sys:String x:Key="Main.UpdatesFound">✔ Denetim tamamlandı: {0} oyun için güncelleme var.</sys:String>
+    <sys:String x:Key="Main.UpdateLine">↑ {0}: yüklü {1}, son {2}</sys:String>
+
+    <!-- Detail panel -->
+    <sys:String x:Key="Detail.Installed">Yüklü sürüm</sys:String>
+    <sys:String x:Key="Detail.Latest">Son sürüm</sys:String>
+    <sys:String x:Key="Detail.Size">Boyut</sys:String>
+    <sys:String x:Key="Detail.Location">Konum</sys:String>
+    <sys:String x:Key="Detail.Freeze">Güncellemeleri engelle</sys:String>
+    <sys:String x:Key="Detail.FreezeTip">Manifest'i son sürümün build ve depot bilgilerine yönlendirir. Steam oyunu güncel kabul eder; yüklü dosyalar değişmez.</sys:String>
+    <sys:String x:Key="Detail.Check">Denetle</sys:String>
+    <sys:String x:Key="Detail.CheckTip">Bu oyunun son sürümünü denetler.</sys:String>
+    <sys:String x:Key="Detail.Restore">Geri yükle</sys:String>
+    <sys:String x:Key="Detail.RestoreTip">Orijinal manifest'i geri yükler. Steam oyunu normal şekilde günceller.</sys:String>
+    <sys:String x:Key="Detail.Options">SEÇENEKLER</sys:String>
+    <sys:String x:Key="Opt.OnLaunch">Yalnızca başlatırken güncelle</sys:String>
+    <sys:String x:Key="Opt.OnLaunchHint">Steam'in bu oyun için otomatik güncelleme ayarını değiştirir.</sys:String>
+    <sys:String x:Key="Opt.ClearCache">Yarım kalan indirmeleri temizle</sys:String>
+    <sys:String x:Key="Opt.ClearCacheHint">steamapps\downloading ve steamapps\temp içindeki bu oyuna ait dosyaları siler.</sys:String>
+
+    <!-- Game status -->
+    <sys:String x:Key="Game.SubTitle">AppID {0}  ·  {1} dalı</sys:String>
+    <sys:String x:Key="Game.NewUpdate">Yeni sürüm yayınlandı</sys:String>
+    <sys:String x:Key="Game.UpdateAvailable">Güncelleme var</sys:String>
+    <sys:String x:Key="Game.Frozen">Engellendi</sys:String>
+    <sys:String x:Key="Game.UpToDate">Güncel</sys:String>
+    <sys:String x:Key="Game.UpdatePending">Güncelleme bekliyor</sys:String>
+    <sys:String x:Key="Game.Installed">Yüklü</sys:String>
+    <sys:String x:Key="Game.Unnamed">(adsız {0})</sys:String>
+
+    <!-- Notices -->
+    <sys:String x:Key="Notice.FetchFailed">Veri alınamadı. Ayrıntılar günlükte.</sys:String>
+    <sys:String x:Key="Notice.NoLatest">Son sürüm alınamadı. Oyun anonim erişime kapalı olabilir.</sys:String>
+    <sys:String x:Key="Notice.UpToDate">Yüklü sürüm ({0}) en günceli.</sys:String>
+    <sys:String x:Key="Notice.UpdateAvailable">Güncelleme var: build {0}. Mevcut sürümde kalmak için "Güncellemeleri engelle"yi seçin.</sys:String>
+
+    <!-- Block / restore -->
+    <sys:String x:Key="Freeze.ConfirmMsg">{0} manifest'i son sürüme yönlendirilecek. Steam oyunu güncel kabul eder; yüklü dosyalar değişmez.\n\nOrijinal manifest yedeklenir ve istendiğinde geri yüklenebilir.</sys:String>
+    <sys:String x:Key="Freeze.ConfirmBtn">Engelle</sys:String>
+    <sys:String x:Key="Freeze.AlreadyLog">= {0}: manifest zaten son sürümü ({1}) gösteriyor.</sys:String>
+    <sys:String x:Key="Freeze.AlreadyNotice">Manifest zaten son sürümü ({0}) gösteriyor. Değişiklik yapılmadı.</sys:String>
+    <sys:String x:Key="Freeze.DoneLog">✔ {0}: güncellemeler engellendi (build {1}).</sys:String>
+    <sys:String x:Key="Freeze.DoneNotice">Güncellemeler engellendi (build {0}).{1} Steam oyunu güncel olarak gösterecek.</sys:String>
+    <sys:String x:Key="Freeze.DepotsFixed">{0} depot Steam'e göre düzeltildi.</sys:String>
+    <sys:String x:Key="Restore.Title">Orijinal manifest'i geri yükle</sys:String>
+    <sys:String x:Key="Restore.Msg">{0} için orijinal manifest geri yüklenecek. Steam oyunu normal şekilde güncelleyecek.</sys:String>
+    <sys:String x:Key="Restore.DoneLog">✔ {0}: orijinal manifest geri yüklendi.</sys:String>
+    <sys:String x:Key="Restore.DoneNotice">Orijinal manifest geri yüklendi. Steam oyunu normal şekilde güncelleyecek.</sys:String>
+
+    <!-- Steam -->
+    <sys:String x:Key="Steam.RunningTitle">Steam çalışıyor</sys:String>
+    <sys:String x:Key="Steam.RunningMsg">Steam çalışırken manifest değişikliklerinin üzerine yazabilir.\n\nDevam etmeden önce Steam'i sistem tepsisinden kapatın.</sys:String>
+    <sys:String x:Key="Steam.NotFoundTitle">Steam bulunamadı</sys:String>
+    <sys:String x:Key="Steam.NotFoundMsg">Ayarlar'dan Steam klasörünü belirtin.</sys:String>
+
+    <!-- SteamCMD -->
+    <sys:String x:Key="SteamCmd.RequiredTitle">SteamCMD gerekli</sys:String>
+    <sys:String x:Key="SteamCmd.RequiredMsg">Son sürüm bilgisi SteamCMD ile alınır. Valve'dan indirilsin mi? (yaklaşık 4 MB)\n\n{0}</sys:String>
+    <sys:String x:Key="SteamCmd.Downloading">SteamCMD indiriliyor…</sys:String>
+    <sys:String x:Key="SteamCmd.Installed">✔ SteamCMD kuruldu: {0}</sys:String>
+    <sys:String x:Key="SteamCmd.InstallFailed">✘ SteamCMD kurulamadı: {0}</sys:String>
+    <sys:String x:Key="SteamCmd.InstallFailedTitle">Kurulum başarısız</sys:String>
+    <sys:String x:Key="SteamCmd.NoArchiveExe">Arşivde steamcmd.exe bulunamadı.</sys:String>
+    <sys:String x:Key="SteamCmd.Retry">Uygulama bilgisi gelmedi. Yeniden deneniyor…</sys:String>
+    <sys:String x:Key="SteamCmd.NoInfo">SteamCMD çıktısında uygulama bilgisi yok. AppID hatalı olabilir veya Steam'e ulaşılamıyor olabilir.</sys:String>
+    <sys:String x:Key="SteamCmd.NotFound">SteamCMD bulunamadı: {0}</sys:String>
+    <sys:String x:Key="SteamCmd.StartFailed">SteamCMD başlatılamadı: {0}</sys:String>
+    <sys:String x:Key="SteamCmd.Timeout">SteamCMD zaman aşımına uğradı.</sys:String>
+
+    <!-- Manifest patching -->
+    <sys:String x:Key="Patch.NoAppState">Manifest'te AppState bulunamadı.</sys:String>
+    <sys:String x:Key="Patch.NoInfo">SteamCMD {0} için veri döndürmedi.</sys:String>
+    <sys:String x:Key="Patch.NoBuild">'{0}' dalı için build ID yok. Dal parola korumalı veya anonim erişime kapalı olabilir.</sys:String>
+    <sys:String x:Key="Patch.PublicFallback">Depot {0} için '{1}' manifest'i yok; public kullanıldı.</sys:String>
+    <sys:String x:Key="Patch.MissingDepots">Şu depotlar için manifest ID alınamadı: {0}. Oyun anonim erişime kapalı olabilir.</sys:String>
+    <sys:String x:Key="Patch.DepotRemoved">depot {0} kaldırıldı ({1})</sys:String>
+    <sys:String x:Key="Patch.ReasonNoKey">DLC'ye sahip değilsiniz</sys:String>
+    <sys:String x:Key="Patch.ReasonConfig">dil veya DLC ayarlarıyla uyuşmuyor</sys:String>
+    <sys:String x:Key="Patch.AddedNoManifest">Steam depot {0} bekliyor ancak manifest ID bulunamadı.</sys:String>
+    <sys:String x:Key="Patch.DepotAdded">depot {0} eklendi (Steam bekliyor)</sys:String>
+    <sys:String x:Key="Patch.AddedWarning">Depot {0} yüklü olarak işaretlendi; dosyaları eksik olabilir.</sys:String>
+    <sys:String x:Key="Patch.OnLaunchSet">AutoUpdateBehavior → 1 (yalnızca başlatırken güncelle)</sys:String>
+    <sys:String x:Key="Patch.StateCleared">Güncelleme durumu temizlendi (StateFlags=4, UpdateResult=0)</sys:String>
+    <sys:String x:Key="Patch.Backup">Yedek: {0}</sys:String>
+    <sys:String x:Key="Patch.Deleted">Silindi: {0}</sys:String>
+    <sys:String x:Key="Patch.DeleteFailed">Silinemedi: {0} ({1})</sys:String>
+    <sys:String x:Key="Patch.NoBackup">Yedek bulunamadı: {0}</sys:String>
+    <sys:String x:Key="Patch.NoAppStateIn">{0}: AppState bulunamadı</sys:String>
+
+    <!-- VDF -->
+    <sys:String x:Key="Vdf.UnexpectedEnd">Beklenmeyen dosya sonu: kapatılmamış '{'</sys:String>
+    <sys:String x:Key="Vdf.ExtraClose">Beklenmeyen '}'</sys:String>
+    <sys:String x:Key="Vdf.UnexpectedOpen">Anahtar beklenirken '{' bulundu</sys:String>
+    <sys:String x:Key="Vdf.MissingValue">'{0}' anahtarının değeri eksik</sys:String>
+    <sys:String x:Key="Vdf.ParseFailed">{0} okunamadı: {1}</sys:String>
+
+    <!-- Depots -->
+    <sys:String x:Key="Depot.NotWindows">Windows için değil</sys:String>
+    <sys:String x:Key="Depot.Arch">Yalnızca {0}-bit</sys:String>
+    <sys:String x:Key="Depot.Lang">Dil: {0}</sys:String>
+    <sys:String x:Key="Depot.LowViolence">Düşük şiddet sürümü</sys:String>
+    <sys:String x:Key="Depot.Dlc">DLC {0}, yalnızca sahipseniz seçin</sys:String>
+    <sys:String x:Key="Depot.Shared">Paylaşılan bileşen</sys:String>
+    <sys:String x:Key="Depot.Title">Depot {0}</sys:String>
+    <sys:String x:Key="Depot.SharedTag">uygulama {0} (DirectX, VC++ vb.)</sys:String>
+    <sys:String x:Key="Depot.LowViolenceTag">düşük şiddet</sys:String>
+
+    <!-- Add from folder -->
+    <sys:String x:Key="Create.Title">Klasörden ekle</sys:String>
+    <sys:String x:Key="Create.Subtitle">Mevcut oyun dosyaları için Steam'e eklemeden önce manifest oluşturun. Steam oyunu yüklü ve güncel olarak algılar.</sys:String>
+    <sys:String x:Key="Create.Step1">Oyun klasörü</sys:String>
+    <sys:String x:Key="Create.FolderPh">Oyunun kurulu olduğu klasör (ör. ...\steamapps\common\Oyun)</sys:String>
+    <sys:String x:Key="Create.Browse">Gözat</sys:String>
+    <sys:String x:Key="Create.Step2">Oyun</sys:String>
+    <sys:String x:Key="Create.AppIdPh">AppID veya oyun adı</sys:String>
+    <sys:String x:Key="Create.Search">Mağazada ara</sys:String>
+    <sys:String x:Key="Create.SearchTip">Steam mağazasında ada göre arar.</sys:String>
+    <sys:String x:Key="Create.Fetch">Bilgileri al</sys:String>
+    <sys:String x:Key="Create.FetchTip">Son sürümü ve depot listesini SteamCMD ile (anonim oturum) alır.</sys:String>
+    <sys:String x:Key="Create.Step3">Yüklü içerik</sys:String>
+    <sys:String x:Key="Create.Step3Hint">Klasörde bulunan depotları seçin. Sahip olunmayan DLC veya dil uyuşmazlığı Steam'in güncelleme başlatmasına neden olur.</sys:String>
+    <sys:String x:Key="Create.Language">DİL</sys:String>
+    <sys:String x:Key="Create.Branch">DAL</sys:String>
+    <sys:String x:Key="Create.DepotPh">Oyun bilgileri alındıktan sonra depotlar burada listelenir.</sys:String>
+    <sys:String x:Key="Create.Create">Manifest oluştur</sys:String>
+    <sys:String x:Key="Create.StatusStart">Başlamak için oyun klasörünü seçin.</sys:String>
+    <sys:String x:Key="Create.PickFolder">Oyunun kurulu olduğu klasörü seçin</sys:String>
+    <sys:String x:Key="Create.FolderMissing">Klasör bulunamadı.</sys:String>
+    <sys:String x:Key="Create.InLibrary">Steam kütüphanesi: {0}</sys:String>
+    <sys:String x:Key="Create.OutsideLibrary">Bu klasör bir Steam kütüphanesinde değil. Aynı diskteki bir kütüphaneye taşınması önerilecek.</sys:String>
+    <sys:String x:Key="Create.AppIdFound">steam_appid.txt dosyasından algılandı. "Bilgileri al" ile devam edin.</sys:String>
+    <sys:String x:Key="Create.AppIdFoundStatus">AppID algılandı: {0}</sys:String>
+    <sys:String x:Key="Create.AppIdGuess">AppID algılanamadı. Klasör adı yazıldı; oyunu bulmak için "Mağazada ara"yı kullanın.</sys:String>
+    <sys:String x:Key="Create.AppIdNotFoundStatus">AppID algılanamadı. Mağazada arayın.</sys:String>
+    <sys:String x:Key="Create.SearchNeedTerm">Bir oyun adı girin veya klasör seçin.</sys:String>
+    <sys:String x:Key="Create.Searching">Mağazada aranıyor: {0}</sys:String>
+    <sys:String x:Key="Create.SearchResults">{0} sonuç. Oyunu seçin; bilgilerini de almak için çift tıklayın.</sys:String>
+    <sys:String x:Key="Create.SearchNone">Sonuç yok. Farklı bir ad deneyin.</sys:String>
+    <sys:String x:Key="Create.SearchFailed">✘ Mağaza araması başarısız: {0}</sys:String>
+    <sys:String x:Key="Create.Fetching">{0} bilgileri SteamCMD ile alınıyor (anonim)…</sys:String>
+    <sys:String x:Key="Create.NoAppInfo">Uygulama bilgisi alınamadı.</sys:String>
+    <sys:String x:Key="Create.PreviewInfo">AppID {0}  ·  {1} build {2}  ·  {3} depot</sys:String>
+    <sys:String x:Key="Create.NoDepots">✘ Depot bilgisi gelmedi. Oyun anonim erişime kapalı olabilir.</sys:String>
+    <sys:String x:Key="Create.NoBuild">✘ '{0}' dalı için build ID yok. Dal adını denetleyin.</sys:String>
+    <sys:String x:Key="Create.ReviewDepots">Seçili depotları gözden geçirip "Manifest oluştur"u seçin.</sys:String>
+    <sys:String x:Key="Create.NeedFolder">Önce oyun klasörünü seçin.</sys:String>
+    <sys:String x:Key="Create.AppIdChanged">AppID değişti. Bilgileri yeniden alın.</sys:String>
+    <sys:String x:Key="Create.NeedDepot">En az bir oyun depotu seçin.</sys:String>
+    <sys:String x:Key="Create.LangMismatchTitle">Dil uyuşmazlığı</sys:String>
+    <sys:String x:Key="Create.LangMismatchMsg">Şu depotlar seçili dille ({0}) uyuşmuyor:\n{1}\n\nSteam bunları kaldırmak için güncelleme başlatır. Korumak için yukarıdan dili değiştirin.</sys:String>
+    <sys:String x:Key="Create.OtherLibTitle">Oyun zaten yüklü</sys:String>
+    <sys:String x:Key="Create.OtherLibMsg">Bu oyun başka bir kütüphanede kayıtlı:\n{0}\n\nÇakışmayı önlemek için önce o kopyayı Steam'den kaldırın.</sys:String>
+    <sys:String x:Key="Create.ExistsTitle">Manifest mevcut</sys:String>
+    <sys:String x:Key="Create.ExistsMsg">Bu kütüphanede zaten bir manifest var:\n{0}\n\nÜzerine yazılsın mı? Mevcut dosya yedeklenir.</sys:String>
+    <sys:String x:Key="Create.Overwrite">Üzerine yaz</sys:String>
+    <sys:String x:Key="Create.Sizing">Klasör boyutu hesaplanıyor…</sys:String>
+    <sys:String x:Key="Create.DoneLog">✔ Manifest oluşturuldu: {0}</sys:String>
+    <sys:String x:Key="Create.DoneSummary">{0} · build {1} · {2} depot · {3}</sys:String>
+    <sys:String x:Key="Create.DoneTitle">Manifest oluşturuldu</sys:String>
+    <sys:String x:Key="Create.DoneMsg">{0}, Steam kütüphanesinde yüklü ve güncel olarak görünecek.\n\nNot: Steam'deki "Oyun dosyalarının bütünlüğünü doğrula" işlemi dosyaları son sürümle değiştirir.</sys:String>
+    <sys:String x:Key="Create.Failed">✘ Manifest oluşturulamadı: {0}</sys:String>
+    <sys:String x:Key="Create.NeedLibraryTitle">Steam kütüphanesi yok</sys:String>
+    <sys:String x:Key="Create.NeedLibraryMsg">Klasör bir Steam kütüphanesinde değil ve {0} sürücüsünde Steam kütüphanesi yok.\n\nSteam'de (Ayarlar > Depolama) bu sürücüye bir kütüphane ekleyin veya klasörü mevcut bir kütüphanenin steamapps\common klasörüne taşıyın.</sys:String>
+    <sys:String x:Key="Create.CantMoveTitle">Klasör taşınamıyor</sys:String>
+    <sys:String x:Key="Create.CantMoveMsg">Aynı adda bir klasör zaten var:\n{0}</sys:String>
+    <sys:String x:Key="Create.MoveTitle">Kütüphaneye taşı</sys:String>
+    <sys:String x:Key="Create.MoveMsg">Steam yalnızca kütüphanenin steamapps\common klasöründeki oyunları algılar. Klasör taşınsın mı?\n\n{0}\n→ {1}\n\nAynı sürücüde taşıma anında tamamlanır.</sys:String>
+    <sys:String x:Key="Create.MoveBtn">Taşı</sys:String>
+    <sys:String x:Key="Create.MoveFailed">✘ Klasör taşınamadı: {0} (oyun veya klasördeki bir dosya açık olabilir)</sys:String>
+    <sys:String x:Key="Create.Moved">Taşındı: {0}</sys:String>
+    <sys:String x:Key="Create.MovedLog">Klasör taşındı: {0}</sys:String>
+
+    <!-- Settings -->
+    <sys:String x:Key="Settings.Title">Ayarlar</sys:String>
+    <sys:String x:Key="Settings.Subtitle">Yollar otomatik algılanır. Yalnızca farklı bir konum kullanıyorsanız değiştirin.</sys:String>
+    <sys:String x:Key="Settings.UiLanguage">DİL</sys:String>
+    <sys:String x:Key="Settings.SteamFolder">STEAM KLASÖRÜ</sys:String>
+    <sys:String x:Key="Settings.Detect">Algıla</sys:String>
+    <sys:String x:Key="Settings.CmdPh">steamcmd.exe yolu</sys:String>
+    <sys:String x:Key="Settings.Install">İndir</sys:String>
+    <sys:String x:Key="Settings.InstallTip">SteamCMD'yi Valve'dan indirir.</sys:String>
+    <sys:String x:Key="Settings.SteamNotDetected">Steam kurulumu algılanamadı.</sys:String>
+    <sys:String x:Key="Settings.NoSteamapps">Bu konumda steamapps klasörü yok.</sys:String>
+    <sys:String x:Key="Settings.SteamFound">✓ Steam bulundu · {0} kütüphane klasörü</sys:String>
+    <sys:String x:Key="Settings.CmdReady">✓ SteamCMD hazır</sys:String>
+    <sys:String x:Key="Settings.CmdMissing">SteamCMD bulunamadı. Kurmak için "İndir"i seçin.</sys:String>
+    <sys:String x:Key="Settings.PickSteam">Steam klasörünü seçin</sys:String>
+    <sys:String x:Key="Settings.PickCmd">steamcmd.exe dosyasını seçin</sys:String>
+    <sys:String x:Key="Settings.ExeFilter">Uygulamalar (*.exe)</sys:String>
+    <sys:String x:Key="Settings.Downloading">İndiriliyor…</sys:String>
+    <sys:String x:Key="Settings.InstallFailed">İndirme başarısız: {0}</sys:String>
+
+    <!-- Errors -->
+    <sys:String x:Key="Err.Unexpected">Beklenmeyen hata</sys:String>
+</ResourceDictionary>

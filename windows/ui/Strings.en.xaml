@@ -1,0 +1,232 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Common -->
+    <sys:String x:Key="Common.Cancel">Cancel</sys:String>
+    <sys:String x:Key="Common.Stop">Stop</sys:String>
+    <sys:String x:Key="Common.OK">OK</sys:String>
+    <sys:String x:Key="Common.Close">Close</sys:String>
+    <sys:String x:Key="Common.Save">Save</sys:String>
+    <sys:String x:Key="Common.Browse">Browse</sys:String>
+    <sys:String x:Key="Common.ContinueAnyway">Continue anyway</sys:String>
+    <sys:String x:Key="Common.Cancelled">Cancelled.</sys:String>
+    <sys:String x:Key="Common.NotFound">not found</sys:String>
+
+    <!-- Main window -->
+    <sys:String x:Key="App.Tagline">Steam update control</sys:String>
+    <sys:String x:Key="Main.Search">Search library</sys:String>
+    <sys:String x:Key="Main.Add">Add from folder</sys:String>
+    <sys:String x:Key="Main.AddTip">Create a manifest for a game folder that is not in Steam yet, so Steam does not start an update when it detects the game.</sys:String>
+    <sys:String x:Key="Main.Refresh">Refresh (F5)</sys:String>
+    <sys:String x:Key="Main.Settings">Settings</sys:String>
+    <sys:String x:Key="Main.Library">Library</sys:String>
+    <sys:String x:Key="Main.ShowTools">Show tools</sys:String>
+    <sys:String x:Key="Main.CheckAll">Check for updates</sys:String>
+    <sys:String x:Key="Main.CheckAllTip">Query the latest build of every listed game with SteamCMD (anonymous login).</sys:String>
+    <sys:String x:Key="Main.PickGame">No game selected</sys:String>
+    <sys:String x:Key="Main.PickGameHint">Select a game from the library to see its details.</sys:String>
+    <sys:String x:Key="Main.Log">Log</sys:String>
+    <sys:String x:Key="Main.Ready">Ready</sys:String>
+    <sys:String x:Key="Main.NoSteam">Steam installation not found. Set the Steam folder in Settings.</sys:String>
+    <sys:String x:Key="Main.GamesFound">{0} games</sys:String>
+    <sys:String x:Key="Main.EmptyNoSteam">Steam folder not found. Set it in Settings.</sys:String>
+    <sys:String x:Key="Main.EmptyNoMatch">No games match the search</sys:String>
+    <sys:String x:Key="Main.EmptyNone">No installed games</sys:String>
+    <sys:String x:Key="Main.Fetching">Fetching data from SteamCMD… The first run may take a few minutes.</sys:String>
+    <sys:String x:Key="Main.AllUpToDate">✔ All games are on the latest build.</sys:String>
+    <sys:String x:Key="Main.UpdatesFound">✔ Check complete: {0} game(s) have an update.</sys:String>
+    <sys:String x:Key="Main.UpdateLine">↑ {0}: installed {1}, latest {2}</sys:String>
+
+    <!-- Detail panel -->
+    <sys:String x:Key="Detail.Installed">Installed build</sys:String>
+    <sys:String x:Key="Detail.Latest">Latest build</sys:String>
+    <sys:String x:Key="Detail.Size">Size</sys:String>
+    <sys:String x:Key="Detail.Location">Location</sys:String>
+    <sys:String x:Key="Detail.Freeze">Block updates</sys:String>
+    <sys:String x:Key="Detail.FreezeTip">Point the manifest to the latest build and depot manifests. Steam treats the game as up to date; installed files are not changed.</sys:String>
+    <sys:String x:Key="Detail.Check">Check</sys:String>
+    <sys:String x:Key="Detail.CheckTip">Check the latest build of this game.</sys:String>
+    <sys:String x:Key="Detail.Restore">Restore</sys:String>
+    <sys:String x:Key="Detail.RestoreTip">Restore the original manifest. Steam will update the game normally.</sys:String>
+    <sys:String x:Key="Detail.Options">OPTIONS</sys:String>
+    <sys:String x:Key="Opt.OnLaunch">Update only on launch</sys:String>
+    <sys:String x:Key="Opt.OnLaunchHint">Sets Steam's automatic update behavior for this game.</sys:String>
+    <sys:String x:Key="Opt.ClearCache">Clear partial downloads</sys:String>
+    <sys:String x:Key="Opt.ClearCacheHint">Deletes this game's files in steamapps\downloading and steamapps\temp.</sys:String>
+
+    <!-- Game status -->
+    <sys:String x:Key="Game.SubTitle">AppID {0}  ·  {1} branch</sys:String>
+    <sys:String x:Key="Game.NewUpdate">Newer build released</sys:String>
+    <sys:String x:Key="Game.UpdateAvailable">Update available</sys:String>
+    <sys:String x:Key="Game.Frozen">Blocked</sys:String>
+    <sys:String x:Key="Game.UpToDate">Up to date</sys:String>
+    <sys:String x:Key="Game.UpdatePending">Update pending</sys:String>
+    <sys:String x:Key="Game.Installed">Installed</sys:String>
+    <sys:String x:Key="Game.Unnamed">(unnamed {0})</sys:String>
+
+    <!-- Notices -->
+    <sys:String x:Key="Notice.FetchFailed">Could not fetch data. See the log for details.</sys:String>
+    <sys:String x:Key="Notice.NoLatest">Could not get the latest build. The game may not allow anonymous access.</sys:String>
+    <sys:String x:Key="Notice.UpToDate">The installed build ({0}) is the latest.</sys:String>
+    <sys:String x:Key="Notice.UpdateAvailable">Update available: build {0}. Select "Block updates" to keep the current version.</sys:String>
+
+    <!-- Block / restore -->
+    <sys:String x:Key="Freeze.ConfirmMsg">The manifest of {0} will point to the latest build. Steam will treat the game as up to date; installed files are not changed.\n\nThe original manifest is backed up and can be restored at any time.</sys:String>
+    <sys:String x:Key="Freeze.ConfirmBtn">Block</sys:String>
+    <sys:String x:Key="Freeze.AlreadyLog">= {0}: the manifest already points to the latest build ({1}).</sys:String>
+    <sys:String x:Key="Freeze.AlreadyNotice">The manifest already points to the latest build ({0}). No changes made.</sys:String>
+    <sys:String x:Key="Freeze.DoneLog">✔ {0}: updates blocked (build {1}).</sys:String>
+    <sys:String x:Key="Freeze.DoneNotice">Updates blocked (build {0}).{1} Steam will show the game as up to date.</sys:String>
+    <sys:String x:Key="Freeze.DepotsFixed">{0} depot(s) adjusted to match Steam.</sys:String>
+    <sys:String x:Key="Restore.Title">Restore original manifest</sys:String>
+    <sys:String x:Key="Restore.Msg">The original manifest of {0} will be restored. Steam will update the game normally.</sys:String>
+    <sys:String x:Key="Restore.DoneLog">✔ {0}: original manifest restored.</sys:String>
+    <sys:String x:Key="Restore.DoneNotice">Original manifest restored. Steam will update the game normally.</sys:String>
+
+    <!-- Steam -->
+    <sys:String x:Key="Steam.RunningTitle">Steam is running</sys:String>
+    <sys:String x:Key="Steam.RunningMsg">Steam may overwrite manifest changes while it is running.\n\nExit Steam from the system tray before continuing.</sys:String>
+    <sys:String x:Key="Steam.NotFoundTitle">Steam not found</sys:String>
+    <sys:String x:Key="Steam.NotFoundMsg">Set the Steam folder in Settings.</sys:String>
+
+    <!-- SteamCMD -->
+    <sys:String x:Key="SteamCmd.RequiredTitle">SteamCMD required</sys:String>
+    <sys:String x:Key="SteamCmd.RequiredMsg">SteamCMD is used to get the latest build information. Download it from Valve (about 4 MB)?\n\n{0}</sys:String>
+    <sys:String x:Key="SteamCmd.Downloading">Downloading SteamCMD…</sys:String>
+    <sys:String x:Key="SteamCmd.Installed">✔ SteamCMD installed: {0}</sys:String>
+    <sys:String x:Key="SteamCmd.InstallFailed">✘ SteamCMD installation failed: {0}</sys:String>
+    <sys:String x:Key="SteamCmd.InstallFailedTitle">Installation failed</sys:String>
+    <sys:String x:Key="SteamCmd.NoArchiveExe">steamcmd.exe not found in the archive.</sys:String>
+    <sys:String x:Key="SteamCmd.Retry">No app info returned. Retrying…</sys:String>
+    <sys:String x:Key="SteamCmd.NoInfo">No app info in the SteamCMD output. The AppID may be wrong or Steam may be unreachable.</sys:String>
+    <sys:String x:Key="SteamCmd.NotFound">SteamCMD not found: {0}</sys:String>
+    <sys:String x:Key="SteamCmd.StartFailed">Could not start SteamCMD: {0}</sys:String>
+    <sys:String x:Key="SteamCmd.Timeout">SteamCMD timed out.</sys:String>
+
+    <!-- Manifest patching -->
+    <sys:String x:Key="Patch.NoAppState">AppState not found in the manifest.</sys:String>
+    <sys:String x:Key="Patch.NoInfo">SteamCMD returned no data for {0}.</sys:String>
+    <sys:String x:Key="Patch.NoBuild">No build ID for branch '{0}'. The branch may be password-protected or unavailable anonymously.</sys:String>
+    <sys:String x:Key="Patch.PublicFallback">Depot {0} has no '{1}' manifest; using public.</sys:String>
+    <sys:String x:Key="Patch.MissingDepots">No manifest ID for depot(s) {0}. The game may not allow anonymous access.</sys:String>
+    <sys:String x:Key="Patch.DepotRemoved">depot {0} removed ({1})</sys:String>
+    <sys:String x:Key="Patch.ReasonNoKey">DLC not owned</sys:String>
+    <sys:String x:Key="Patch.ReasonConfig">does not match the language or DLC settings</sys:String>
+    <sys:String x:Key="Patch.AddedNoManifest">Steam expects depot {0}, but no manifest ID was found.</sys:String>
+    <sys:String x:Key="Patch.DepotAdded">depot {0} added (expected by Steam)</sys:String>
+    <sys:String x:Key="Patch.AddedWarning">Depot {0} is marked as installed; its files may be missing.</sys:String>
+    <sys:String x:Key="Patch.OnLaunchSet">AutoUpdateBehavior → 1 (update only on launch)</sys:String>
+    <sys:String x:Key="Patch.StateCleared">Update state cleared (StateFlags=4, UpdateResult=0)</sys:String>
+    <sys:String x:Key="Patch.Backup">Backup: {0}</sys:String>
+    <sys:String x:Key="Patch.Deleted">Deleted: {0}</sys:String>
+    <sys:String x:Key="Patch.DeleteFailed">Could not delete {0} ({1})</sys:String>
+    <sys:String x:Key="Patch.NoBackup">Backup not found: {0}</sys:String>
+    <sys:String x:Key="Patch.NoAppStateIn">{0}: AppState not found</sys:String>
+
+    <!-- VDF -->
+    <sys:String x:Key="Vdf.UnexpectedEnd">Unexpected end of file: unclosed '{'</sys:String>
+    <sys:String x:Key="Vdf.ExtraClose">Unexpected '}'</sys:String>
+    <sys:String x:Key="Vdf.UnexpectedOpen">Unexpected '{' where a key was expected</sys:String>
+    <sys:String x:Key="Vdf.MissingValue">Missing value for key '{0}'</sys:String>
+    <sys:String x:Key="Vdf.ParseFailed">Could not parse {0}: {1}</sys:String>
+
+    <!-- Depots -->
+    <sys:String x:Key="Depot.NotWindows">Not for Windows</sys:String>
+    <sys:String x:Key="Depot.Arch">{0}-bit only</sys:String>
+    <sys:String x:Key="Depot.Lang">Language: {0}</sys:String>
+    <sys:String x:Key="Depot.LowViolence">Low-violence version</sys:String>
+    <sys:String x:Key="Depot.Dlc">DLC {0}, select only if owned</sys:String>
+    <sys:String x:Key="Depot.Shared">Shared component</sys:String>
+    <sys:String x:Key="Depot.Title">Depot {0}</sys:String>
+    <sys:String x:Key="Depot.SharedTag">app {0} (DirectX, VC++, etc.)</sys:String>
+    <sys:String x:Key="Depot.LowViolenceTag">low violence</sys:String>
+
+    <!-- Add from folder -->
+    <sys:String x:Key="Create.Title">Add from folder</sys:String>
+    <sys:String x:Key="Create.Subtitle">Create a manifest for existing game files before adding them to Steam. Steam then detects the game as installed and up to date.</sys:String>
+    <sys:String x:Key="Create.Step1">Game folder</sys:String>
+    <sys:String x:Key="Create.FolderPh">Game installation folder (e.g. ...\steamapps\common\Game)</sys:String>
+    <sys:String x:Key="Create.Browse">Browse</sys:String>
+    <sys:String x:Key="Create.Step2">Game</sys:String>
+    <sys:String x:Key="Create.AppIdPh">AppID or game name</sys:String>
+    <sys:String x:Key="Create.Search">Search store</sys:String>
+    <sys:String x:Key="Create.SearchTip">Search the Steam store by name.</sys:String>
+    <sys:String x:Key="Create.Fetch">Fetch info</sys:String>
+    <sys:String x:Key="Create.FetchTip">Get the latest build and depot list with SteamCMD (anonymous login).</sys:String>
+    <sys:String x:Key="Create.Step3">Installed content</sys:String>
+    <sys:String x:Key="Create.Step3Hint">Select the depots present in the folder. Unowned DLC or a language mismatch makes Steam start an update.</sys:String>
+    <sys:String x:Key="Create.Language">LANGUAGE</sys:String>
+    <sys:String x:Key="Create.Branch">BRANCH</sys:String>
+    <sys:String x:Key="Create.DepotPh">Depots appear here after the game info is fetched.</sys:String>
+    <sys:String x:Key="Create.Create">Create manifest</sys:String>
+    <sys:String x:Key="Create.StatusStart">Select the game folder to begin.</sys:String>
+    <sys:String x:Key="Create.PickFolder">Select the game installation folder</sys:String>
+    <sys:String x:Key="Create.FolderMissing">Folder not found.</sys:String>
+    <sys:String x:Key="Create.InLibrary">Steam library: {0}</sys:String>
+    <sys:String x:Key="Create.OutsideLibrary">This folder is not in a Steam library. Moving it to a library on the same drive will be offered.</sys:String>
+    <sys:String x:Key="Create.AppIdFound">Detected from steam_appid.txt. Continue with "Fetch info".</sys:String>
+    <sys:String x:Key="Create.AppIdFoundStatus">AppID detected: {0}</sys:String>
+    <sys:String x:Key="Create.AppIdGuess">AppID not detected. The folder name was entered; use "Search store" to find the game.</sys:String>
+    <sys:String x:Key="Create.AppIdNotFoundStatus">AppID not detected. Search the store.</sys:String>
+    <sys:String x:Key="Create.SearchNeedTerm">Enter a game name or select a folder.</sys:String>
+    <sys:String x:Key="Create.Searching">Searching the store: {0}</sys:String>
+    <sys:String x:Key="Create.SearchResults">{0} results. Select the game; double-click to also fetch its info.</sys:String>
+    <sys:String x:Key="Create.SearchNone">No results. Try a different name.</sys:String>
+    <sys:String x:Key="Create.SearchFailed">✘ Store search failed: {0}</sys:String>
+    <sys:String x:Key="Create.Fetching">Fetching {0} with SteamCMD (anonymous)…</sys:String>
+    <sys:String x:Key="Create.NoAppInfo">Could not get app info.</sys:String>
+    <sys:String x:Key="Create.PreviewInfo">AppID {0}  ·  {1} build {2}  ·  {3} depots</sys:String>
+    <sys:String x:Key="Create.NoDepots">✘ No depot info returned. The game may not allow anonymous access.</sys:String>
+    <sys:String x:Key="Create.NoBuild">✘ No build ID for branch '{0}'. Check the branch name.</sys:String>
+    <sys:String x:Key="Create.ReviewDepots">Review the selected depots, then select "Create manifest".</sys:String>
+    <sys:String x:Key="Create.NeedFolder">Select the game folder first.</sys:String>
+    <sys:String x:Key="Create.AppIdChanged">The AppID has changed. Fetch the info again.</sys:String>
+    <sys:String x:Key="Create.NeedDepot">Select at least one game depot.</sys:String>
+    <sys:String x:Key="Create.LangMismatchTitle">Language mismatch</sys:String>
+    <sys:String x:Key="Create.LangMismatchMsg">These depots do not match the selected language ({0}):\n{1}\n\nSteam will start an update to remove them. To keep them, change the language above.</sys:String>
+    <sys:String x:Key="Create.OtherLibTitle">Game already installed</sys:String>
+    <sys:String x:Key="Create.OtherLibMsg">This game is already registered in another library:\n{0}\n\nUninstall that copy in Steam first to avoid conflicts.</sys:String>
+    <sys:String x:Key="Create.ExistsTitle">Manifest exists</sys:String>
+    <sys:String x:Key="Create.ExistsMsg">A manifest already exists in this library:\n{0}\n\nOverwrite it? The current file will be backed up.</sys:String>
+    <sys:String x:Key="Create.Overwrite">Overwrite</sys:String>
+    <sys:String x:Key="Create.Sizing">Calculating folder size…</sys:String>
+    <sys:String x:Key="Create.DoneLog">✔ Manifest created: {0}</sys:String>
+    <sys:String x:Key="Create.DoneSummary">{0} · build {1} · {2} depots · {3}</sys:String>
+    <sys:String x:Key="Create.DoneTitle">Manifest created</sys:String>
+    <sys:String x:Key="Create.DoneMsg">{0} will appear in the Steam library as installed and up to date.\n\nNote: "Verify integrity of game files" in Steam replaces the files with the latest version.</sys:String>
+    <sys:String x:Key="Create.Failed">✘ Could not create the manifest: {0}</sys:String>
+    <sys:String x:Key="Create.NeedLibraryTitle">No Steam library</sys:String>
+    <sys:String x:Key="Create.NeedLibraryMsg">The folder is not in a Steam library, and drive {0} has no Steam library.\n\nAdd a library on this drive in Steam (Settings > Storage), or move the folder into an existing library's steamapps\common folder.</sys:String>
+    <sys:String x:Key="Create.CantMoveTitle">Cannot move folder</sys:String>
+    <sys:String x:Key="Create.CantMoveMsg">A folder with the same name already exists:\n{0}</sys:String>
+    <sys:String x:Key="Create.MoveTitle">Move to library</sys:String>
+    <sys:String x:Key="Create.MoveMsg">Steam only detects games inside a library's steamapps\common folder. Move the folder?\n\n{0}\n→ {1}\n\nThe move is instant on the same drive.</sys:String>
+    <sys:String x:Key="Create.MoveBtn">Move</sys:String>
+    <sys:String x:Key="Create.MoveFailed">✘ Could not move the folder: {0} (the game or a file in it may be open)</sys:String>
+    <sys:String x:Key="Create.Moved">Moved to {0}</sys:String>
+    <sys:String x:Key="Create.MovedLog">Folder moved: {0}</sys:String>
+
+    <!-- Settings -->
+    <sys:String x:Key="Settings.Title">Settings</sys:String>
+    <sys:String x:Key="Settings.Subtitle">Paths are detected automatically. Change them only for custom locations.</sys:String>
+    <sys:String x:Key="Settings.UiLanguage">LANGUAGE</sys:String>
+    <sys:String x:Key="Settings.SteamFolder">STEAM FOLDER</sys:String>
+    <sys:String x:Key="Settings.Detect">Detect</sys:String>
+    <sys:String x:Key="Settings.CmdPh">Path to steamcmd.exe</sys:String>
+    <sys:String x:Key="Settings.Install">Download</sys:String>
+    <sys:String x:Key="Settings.InstallTip">Download SteamCMD from Valve.</sys:String>
+    <sys:String x:Key="Settings.SteamNotDetected">Steam installation not detected.</sys:String>
+    <sys:String x:Key="Settings.NoSteamapps">No steamapps folder in this location.</sys:String>
+    <sys:String x:Key="Settings.SteamFound">✓ Steam found · {0} library folder(s)</sys:String>
+    <sys:String x:Key="Settings.CmdReady">✓ SteamCMD ready</sys:String>
+    <sys:String x:Key="Settings.CmdMissing">SteamCMD not found. Select "Download" to install it.</sys:String>
+    <sys:String x:Key="Settings.PickSteam">Select the Steam folder</sys:String>
+    <sys:String x:Key="Settings.PickCmd">Select steamcmd.exe</sys:String>
+    <sys:String x:Key="Settings.ExeFilter">Applications (*.exe)</sys:String>
+    <sys:String x:Key="Settings.Downloading">Downloading…</sys:String>
+    <sys:String x:Key="Settings.InstallFailed">Download failed: {0}</sys:String>
+
+    <!-- Errors -->
+    <sys:String x:Key="Err.Unexpected">Unexpected error</sys:String>
+</ResourceDictionary>
